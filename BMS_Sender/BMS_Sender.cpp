@@ -9,7 +9,7 @@
 int BMS_parameters::generate_random_value(int min_value, int max_value)
 {
 	return (rand() % (min_value - max_value + 1)) + min_value;
-};
+}
 
 int BMS_parameters::get_temperature()
 {
