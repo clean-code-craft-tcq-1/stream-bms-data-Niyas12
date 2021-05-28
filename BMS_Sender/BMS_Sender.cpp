@@ -1,5 +1,12 @@
 #include <cstdio>
 #include <cstdlib>
+#include <sstream>
+#include <iostream>
+#include "BMS_Sender.h"
+#include <chrono>
+#include <thread>
+
+using namespace std;
 
 class BMS_parameters
 {
@@ -7,44 +14,47 @@ class BMS_parameters
 	int temeperature;
 
 public:
-	void generate_parameters()
+	int generate_random_value(int min_value, int max_value)
 	{
-		SOC = rand() % 100 + 1;
-		temeperature = rand() % 100 + 1;
+		return (rand() % (min_value - max_value + 1)) + min_value;
 	};
 
 	int get_temperature()
 	{
-		return temeperature;
+		return generate_random_value(MIN_TEMP,MAX_TEMP);
 	}
 
 	int get_soc()
 	{
-		return SOC;
+		return generate_random_value(MIN_SOC, MAX_SOC);
 	}
 
 };
 
-class Data_streamer
+class Data_generator
 {
 	BMS_parameters parameters;
 
 public:
 
-	void stream_console()
-	{
-		parameters.generate_parameters();
-		printf("soc: %d, temperature: %d \n", parameters.get_soc(), parameters.get_temperature());
+	stringstream prepare_data()
+	{		
+		stringstream data;
+		data << "{\"Temperature\": " << parameters.get_temperature() << " ,\"SOC\": " << parameters.get_soc() << " }\n";
+		return data;
 	}
 
 };
 
 int main()
 {
-	Data_streamer streamer;
+	Data_generator streamer;
 
-	streamer.stream_console();
-
+	for (int index = 0;index < 10; index++)
+	{
+		cout << streamer.prepare_data().str();
+		this_thread::sleep_for(chrono::milliseconds(500));
+	}
 
 	return 0;
 }
