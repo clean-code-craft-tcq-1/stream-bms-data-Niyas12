@@ -1,4 +1,8 @@
 #pragma once
+#include <cstdio>
+#include <cstdlib>
+#include <sstream>
+#include <iostream>
 
 #define MAX_TEMP 100
 #define MIN_TEMP 50
