@@ -29,3 +29,5 @@ BMS_Sender/Debug/BMS_Sender.vcxproj.FileListAbsolute.txt
 BMS_Sender/Debug/vc142.idb
 BMS_Sender/Debug/vc142.pdb
 BMS_Sender/.vs/BMS_Sender/v16/ipch/AutoPCH/f375a83b739e614c/BMS_SENDER.ipch
+BMS_Sender/.vs/BMS_Sender/v16/ipch/AutoPCH/57728bb33baa8fe4/TEST_SENDER.ipch
+BMS_Sender/Debug/test_sender.obj

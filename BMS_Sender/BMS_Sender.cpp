@@ -6,45 +6,27 @@
 #include <chrono>
 #include <thread>
 
-using namespace std;
-
-class BMS_parameters
+int BMS_parameters::generate_random_value(int min_value, int max_value)
 {
-	int SOC;
-	int temeperature;
-
-public:
-	int generate_random_value(int min_value, int max_value)
-	{
-		return (rand() % (min_value - max_value + 1)) + min_value;
-	};
-
-	int get_temperature()
-	{
-		return generate_random_value(MIN_TEMP,MAX_TEMP);
-	}
-
-	int get_soc()
-	{
-		return generate_random_value(MIN_SOC, MAX_SOC);
-	}
-
+	return (rand() % (min_value - max_value + 1)) + min_value;
 };
 
-class Data_generator
+int BMS_parameters::get_temperature()
 {
-	BMS_parameters parameters;
+	return generate_random_value(MIN_TEMP,MAX_TEMP);
+}
 
-public:
+int BMS_parameters::get_soc()
+{
+	return generate_random_value(MIN_SOC, MAX_SOC);
+}
 
-	stringstream prepare_data()
-	{		
-		stringstream data;
-		data << "{\"Temperature\": " << parameters.get_temperature() << " ,\"SOC\": " << parameters.get_soc() << " }\n";
-		return data;
-	}
-
-};
+std::stringstream Data_generator::prepare_data()
+{		
+	std::stringstream data;
+	data << "{\"Temperature\": " << parameters.get_temperature() << " ,\"SOC\": " << parameters.get_soc() << " }\n";
+	return data;
+}
 
 int main()
 {
@@ -52,8 +34,8 @@ int main()
 
 	for (int index = 0;index < 10; index++)
 	{
-		cout << streamer.prepare_data().str();
-		this_thread::sleep_for(chrono::milliseconds(500));
+		std::cout << streamer.prepare_data().str();
+		std::this_thread::sleep_for(std::chrono::milliseconds(500));
 	}
 
 	return 0;
