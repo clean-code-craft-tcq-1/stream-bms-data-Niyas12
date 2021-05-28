@@ -31,3 +31,5 @@ BMS_Sender/Debug/vc142.pdb
 BMS_Sender/.vs/BMS_Sender/v16/ipch/AutoPCH/f375a83b739e614c/BMS_SENDER.ipch
 BMS_Sender/.vs/BMS_Sender/v16/ipch/AutoPCH/57728bb33baa8fe4/TEST_SENDER.ipch
 BMS_Sender/Debug/test_sender.obj
+BMS_Sender/.vs/BMS_Sender/v16/ipch/AutoPCH/3da0f0e338cb238a/BMS_SENDER_MAIN.ipch
+BMS_Sender/Debug/BMS_sender_main.obj

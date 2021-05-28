@@ -3,8 +3,7 @@
 #include <sstream>
 #include <iostream>
 #include "BMS_Sender.h"
-#include <chrono>
-#include <thread>
+
 
 int BMS_parameters::generate_random_value(int min_value, int max_value)
 {
@@ -28,15 +27,3 @@ std::stringstream Data_generator::prepare_data()
 	return data;
 }
 
-int main()
-{
-	Data_generator streamer;
-
-	for (int index = 0;index < 10; index++)
-	{
-		std::cout << streamer.prepare_data().str();
-		std::this_thread::sleep_for(std::chrono::milliseconds(500));
-	}
-
-	return 0;
-}
