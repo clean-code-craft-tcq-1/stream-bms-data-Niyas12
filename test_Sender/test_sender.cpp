@@ -3,9 +3,13 @@
 #include "catch.hpp"
 #include "../BMS_Sender/BMS_Sender.h"
 
+bool validate_range(int value, int min, int max)
+{
+	return value >= min && value <= max;
+}
 
-TEST_CASE("infers the breach according to limits") {
-	
+TEST_CASE("validate json output") 
+{	
 	Data_generator generator;
 	std::stringstream data = generator.prepare_data();
 
@@ -16,4 +20,8 @@ TEST_CASE("infers the breach according to limits") {
 	int temperature = atoi(parameters[1].c_str());
 	int soc = atoi(parameters[3].c_str());
 
+	REQUIRE(validate_range(temperature, MIN_TEMP, MAX_TEMP));
+	REQUIRE(validate_range(soc, MIN_SOC, MAX_SOC));
+	REQUIRE(parameters[0] == "{\"Temperature\":");
+	REQUIRE(parameters[2] == ",\"SOC\":");
 }
