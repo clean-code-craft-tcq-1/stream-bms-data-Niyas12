@@ -2,6 +2,10 @@
 
 This project is about sending and receiving BMS data.
 
+## Sender created by : Mohammed Niyas Thottathil
+
+## Receiver created by : Preeti Rajbir Singh
+
 ## Decomposition
 
 At a top level, the program runs in two processes - the sender and the receiver.
