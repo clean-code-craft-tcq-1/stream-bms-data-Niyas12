@@ -73,13 +73,13 @@ This section lists the minimum functionality of the Sender and Receiver.
 
 Setup the quality parameters of your project (duplication, complexity, coverage, warnings) using the GitHub workflow yml files.
 
-## Sender Output Format!
+## Sender Output Format
 
-<img width="180" alt="2021-06-17_18h12_27" src="https://user-images.githubusercontent.com/13776900/122398882-f1e10780-cf97-11eb-86ca-40518d08c554.png">
+![image](https://user-images.githubusercontent.com/13776900/122399456-70d64000-cf98-11eb-884a-619681fc6b9b.png)
 
 
 ## Sender Ouput Piped to Receiver Input
 
-<img width="383" alt="2021-06-17_18h13_28" src="https://user-images.githubusercontent.com/13776900/122398849-ea216300-cf97-11eb-9a83-99c0ce1dc670.png">
+![image](https://user-images.githubusercontent.com/13776900/122399430-6a47c880-cf98-11eb-985f-1249f5736303.png)
 
 
