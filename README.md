@@ -4,7 +4,7 @@ This project is about sending and receiving BMS data.
 
 ## Sender created by : Mohammed Niyas Thottathil
 
-## Receiver created by : Preeti Rajbir Singh(EPA5COB)
+## Receiver created by : Preeti Rajbir Singh
 
 ## Decomposition
 
