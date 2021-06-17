@@ -1,4 +1,4 @@
-name: Python application
+name: Test Receiver using sender_output_test python file
 
 on: [push, pull_request]
 
