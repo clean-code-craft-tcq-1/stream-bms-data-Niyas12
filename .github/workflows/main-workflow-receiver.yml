@@ -24,5 +24,5 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings.
         flake8 . --count --exit-zero --max-line-length=80 --ignore=E111,E121,E126 --statistics
-    - name: Run
+    - name: Run Test Receiver
       run: python sender_output_test.py | python receiver_test.py
