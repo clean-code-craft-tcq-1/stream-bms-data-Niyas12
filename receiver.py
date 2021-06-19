@@ -17,9 +17,8 @@ def Form_Receiver_input_and_Perform_Operation():
     
     for i in sys.stdin:
         bms_param = json.loads(i) #creates a dictinary out of 'i'
-        if bms_param in limit.keys():
-            list_temp.append(bms_param['Temperature'])
-            list_soc.append(bms_param['SOC'])
+        list_temp.append(bms_param['Temperature'])
+        list_soc.append(bms_param['SOC'])
        
     print("-----------------Temperature----------------")
     print(list_temp)
