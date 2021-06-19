@@ -10,7 +10,7 @@ import receiver
 class ReceiverTest(unittest.TestCase):
     
     def testSenderOutput(self):
-        receiver.Form_Receiver_input_and_Perform_Operation()
+        receiver.Form_Receiver_input()
      
     def testMinTemp(self):
         self.assertTrue(receiver.calculate_min_temp([20,19,10,15,18,90,60,80,70,50]) == 10)
