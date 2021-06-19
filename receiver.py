@@ -8,6 +8,7 @@ Created on Thu May 27 10:31:35 2021
 
 import sys
 import json
+from Predefined_values import limit
     
 def Form_Receiver_input_and_Perform_Operation():
     
@@ -16,8 +17,9 @@ def Form_Receiver_input_and_Perform_Operation():
     
     for i in sys.stdin:
         bms_param = json.loads(i) #creates a dictinary out of 'i'
-        list_temp.append(bms_param['Temperature'])
-        list_soc.append(bms_param['SOC'])
+        if bms_param in limit.keys():
+            list_temp.append(bms_param['Temperature'])
+            list_soc.append(bms_param['SOC'])
        
     print("-----------------Temperature----------------")
     print(list_temp)
