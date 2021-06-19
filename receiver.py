@@ -25,7 +25,11 @@ def Form_Receiver_input_and_Perform_Operation():
                     list_soc.append(bms_param[key])
             else:
                 print("Not a valid battery parameter")
+                
+         Operations_on_input_and_print_on_console(list_temp,list_soc)       
        
+def Operations_on_input_and_print_on_console(list_temp,list_soc):
+    
     print("-----------------Temperature----------------")
     print(list_temp)
     print("--------------------------------------------")
