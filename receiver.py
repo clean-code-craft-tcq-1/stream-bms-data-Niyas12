@@ -9,7 +9,7 @@ import sys
 import json
 from Predefined_values import limit
     
-def Form_Receiver_input_and_Perform_Operation():
+def Form_Receiver_input():
     
     list_temp =[]
     list_soc =[]
