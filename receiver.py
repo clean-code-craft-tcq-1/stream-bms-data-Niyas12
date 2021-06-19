@@ -17,8 +17,14 @@ def Form_Receiver_input_and_Perform_Operation():
     
     for i in sys.stdin:
         bms_param = json.loads(i) #creates a dictinary out of 'i'
-        list_temp.append(bms_param['Temperature'])
-        list_soc.append(bms_param['SOC'])
+        for key, value in bms_param.items():
+            if key in limit.keys():
+                if key == 'Temperature':
+                    list_temp.append(bms_param[key])
+                if key == 'SOC':    
+                    list_soc.append(bms_param[key])
+             else:
+                print("Not a valid battery parameter")
        
     print("-----------------Temperature----------------")
     print(list_temp)
