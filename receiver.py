@@ -26,7 +26,7 @@ def Form_Receiver_input_and_Perform_Operation():
             else:
                 print("Not a valid battery parameter")
                 
-         Operations_on_input_and_print_on_console(list_temp,list_soc)       
+    Operations_on_input_and_print_on_console(list_temp,list_soc)       
        
 def Operations_on_input_and_print_on_console(list_temp,list_soc):
     
