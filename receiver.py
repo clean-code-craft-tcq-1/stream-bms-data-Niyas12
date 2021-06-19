@@ -23,7 +23,7 @@ def Form_Receiver_input_and_Perform_Operation():
                     list_temp.append(bms_param[key])
                 if key == 'SOC':    
                     list_soc.append(bms_param[key])
-             else:
+            else:
                 print("Not a valid battery parameter")
        
     print("-----------------Temperature----------------")
