@@ -91,6 +91,14 @@ Setup the quality parameters of your project (duplication, complexity, coverage,
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## How sender O/P is read by receiver ##
 
+As we are combining two files(executables) having different platform(i.e., sender is build in C++ and receiver in Python) so we need to make use of '|'(pipe).
+
+Sender executable is stored in '/sender-executable' after the sender is executed successfully.
+
+Receiver is implemented in a python file 'receiver_test.py'.
+
+![image](https://user-images.githubusercontent.com/13776900/122712810-36afbb80-d282-11eb-943c-613752d31cdc.png)
+
 ![image](https://user-images.githubusercontent.com/13776900/122709997-fef24500-d27c-11eb-8e89-67a0751bf030.png)
 
 Receiver is reading the sender O/P by making use '**sys.stdin**' command which reads the data displayed on the console by the sender.
