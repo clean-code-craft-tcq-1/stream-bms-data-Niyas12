@@ -93,8 +93,8 @@ Setup the quality parameters of your project (duplication, complexity, coverage,
 
 ![image](https://user-images.githubusercontent.com/13776900/122709997-fef24500-d27c-11eb-8e89-67a0751bf030.png)
 
--> Receiver is reading the sender O/P by making use '**sys.stdin**' command which reads the data displayed on the console by the sender
--> As the data written on the screen is of string format, it is converted to a dictionary by making use of '**json.loads(i)**' so that it can be processed easily in python
+Receiver is reading the sender O/P by making use '**sys.stdin**' command which reads the data displayed on the console by the sender.
+As the data written on the console by the sender is of string format, it is converted to a dictionary by making use of '**json.loads(i)**'(converts to dictionary automatically) so that it can be processed easily in python
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 ## Sender Ouput Piped to Receiver Input
